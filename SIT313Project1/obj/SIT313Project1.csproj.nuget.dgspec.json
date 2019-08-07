@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\SIT313Project1\\SIT313Project1\\SIT313Project1\\SIT313Project1.csproj": {}
+  },
+  "projects": {
+    "D:\\SIT313Project1\\SIT313Project1\\SIT313Project1\\SIT313Project1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SIT313Project1\\SIT313Project1\\SIT313Project1\\SIT313Project1.csproj",
+        "projectName": "SIT313Project1",
+        "projectPath": "D:\\SIT313Project1\\SIT313Project1\\SIT313Project1\\SIT313Project1.csproj",
+        "packagesPath": "C:\\Users\\QingyunXu\\.nuget\\packages\\",
+        "outputPath": "D:\\SIT313Project1\\SIT313Project1\\SIT313Project1\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\QingyunXu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid90"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid90": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid90": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "Xamarin.Android.Support.Core.Utils": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.CustomTabs": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.Design": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Android.Support.v7.RecyclerView": {
+              "target": "Package",
+              "version": "[28.0.0.1, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}
