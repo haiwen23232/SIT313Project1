@@ -58,15 +58,15 @@ namespace SIT313Project1
         {
             foodList = new List<Food>();
             foodList.Add(new Food(1, "Prawn Dumpling", 10.98, "prawn_dumpling"));
-            foodList.Add(new Food(2, "Vegetarian Dumpling", 6.98, "vegetarian_dumpling"));
-            foodList.Add(new Food(3, "BBQ Pork Bun", 7.98, "bbq_pork_bun"));
-            foodList.Add(new Food(4, "Sticky Rice", 7.98, "sticky_rice"));
-            foodList.Add(new Food(5, "Steamed Vegetables", 8.98, "steamed_vegetables"));
-            foodList.Add(new Food(6, "Egg Yolk Bun", 8.98, "egg_yolk_bun"));
-            foodList.Add(new Food(7, "Custard Bun", 6.98, "custard_bun"));
-            foodList.Add(new Food(8, "Egg Tart", 8.98, "egg_tart"));
-            foodList.Add(new Food(9, "Mango Pudding", 5.98, "mango_pudding"));
-            foodList.Add(new Food(10, "Prawn Spring Roll", 9.98, "prawn_spring_roll"));
+            foodList.Add(new Food(2, "Vegetable Roll", 6.98, "vegetable_roll"));
+            foodList.Add(new Food(3, "Vegetable Salad", 7.98, "vegetable_salad"));
+            foodList.Add(new Food(4, "Dutch Baby Pancake", 7.98, "pancake"));
+            foodList.Add(new Food(5, "Lemon Curd Tart", 8.98, "cheese_tart"));
+            foodList.Add(new Food(6, "Chocolate Waffle", 8.98, "chocolate_waffle"));
+            foodList.Add(new Food(7, "Vege Burger", .98, "vege_berger"));
+            foodList.Add(new Food(8, "Pad Thai", 8.98, "pad_thai"));
+            foodList.Add(new Food(9, "Salmon Salad", 15.98, "salmon_salad"));
+            foodList.Add(new Food(10, "Mango Pudding", 9.98, "mango_pudding"));
         }
     }
 }

@@ -1,10 +1,12 @@
-﻿using Android.App;
+﻿using System.Collections.Generic;
+using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
 using Java.Lang;
+using Java.Util;
 
 namespace SIT313Project1
 {
@@ -15,12 +17,16 @@ namespace SIT313Project1
         private EditText passwordEditText;
         private Button loginButton;
 
+        private Dictionary<string,string> credential;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+
+            SetCredential();
             userNameEditText = FindViewById<EditText>(Resource.Id.login_userName);
             passwordEditText = FindViewById<EditText>(Resource.Id.login_pwd);
             loginButton = FindViewById<Button>(Resource.Id.login_btn);
@@ -39,24 +45,17 @@ namespace SIT313Project1
                     }
                     else
                     {
-                        var localCredential = Application.Context.GetSharedPreferences("Credential", FileCreationMode.Private);
 
                         // default user name is Jason
                         // default password is Jason123
 
-                        // uncomment following  4 lines to change credential
-                        // var credentialEdit = localCredential.Edit();
-                        // credentialEdit.PutString("userName", userName);
-                        // credentialEdit.PutString("password", password);
-                        // credentialEdit.Commit();
-
                         // check credential
-                        string creName = localCredential.GetString("userName", null);
-                        string crePwd = localCredential.GetString("password", null);
+                        string creName = this.credential["userName"];
+                        string crePwd = this.credential["password"];
 
                         if (!creName.Equals(userName) || !crePwd.Equals(password))
                         {
-                            Toast.MakeText(Application.Context, "Wrong user name or password!", ToastLength.Long).Show();
+                           Toast.MakeText(Application.Context, "Wrong user name or password!", ToastLength.Long).Show();
                         }
                         else
                         {
@@ -65,10 +64,13 @@ namespace SIT313Project1
                         }
                     }     
                 };
+        }
 
-
-
-
+        private void SetCredential()
+        {
+            this.credential = new Dictionary<string, string>();
+            credential.Add("userName","Jason");
+            credential.Add("password","Jason123");
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
